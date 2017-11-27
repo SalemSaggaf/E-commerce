@@ -24,6 +24,7 @@
          </form>
          @if(Auth::check()	)
          	<button class="btn btn-primary">{{Auth::user()->name}}</button>
+            <a class="btn btn-primary" href="{{Auth::logout()}}">Logout</a>
          @else
          	<a class="btn btn-primary" href="/login">Login</a>
          	<a class="btn btn-primary"  href="/register">Register</a>
