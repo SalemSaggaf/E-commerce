@@ -14,7 +14,7 @@
 Route::get('/', 'HomeController@index');
 
 
-Route::post('/product' , function(){
+Route::get('/product' , function(){
 	return view('product_review');
 });
 
