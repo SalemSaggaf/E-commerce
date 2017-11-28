@@ -5,12 +5,13 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">تسجيل</div>
-
+            <br><br><br>
+                <div class="panel-heading"  style="float:right">التسجيل</div>
+                <br><br>
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}" dir="rtl" lang="ar">
                         {{ csrf_field() }}
-                        <label for="name" class="col-md-4 control-label">الاسم</label>
+                        <label for="name" class=" control-label" style="float:right">االاسم</label>
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             
 
@@ -24,9 +25,9 @@
                                 @endif
                             </div>
                         </div>
-
+                        <br>
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">اميل</label>
+                            <label for="email" class="control-label" style="float:right">البريد الالكتروني</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
@@ -38,9 +39,9 @@
                                 @endif
                             </div>
                         </div>
-
+                        <br>
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">باسور</label>
+                            <label for="password" class=" control-label" style="float:right">كلمة السر</label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control" name="password" required>
@@ -52,29 +53,35 @@
                                 @endif
                             </div>
                         </div>
-
+                        <br>
                         <div class="form-group">
-                            <label for="password-confirm" class="col-md-4 control-label">تاكيد</label>
+                            <label for="password-confirm" class=" control-label" style="float:right">تأكيد البريد الالكتروني</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
-
+                        <br>
                         <div class="form-group">
-                            <label for="phone_number" class="col-md-4 control-label">رقم التالفون</label>
+                            <label for="phone_number" class=" control-label" style="float:right">رقم التليفون</label>
 
                       <div class="col-md-6">
                                 <input id="phone_number" type="text" class="form-control" name="phone_number" required>
                             </div>
                         </div>
-
+                        <br><br>
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    تسجيل
+                                    التسجيل
+                                </button>
+                                 <button type="submit" class="btn btn-primary">
+                                    الغاء
                                 </button>
                             </div>
+                             
+                               
+
                         </div>
                     </form>
                 </div>
