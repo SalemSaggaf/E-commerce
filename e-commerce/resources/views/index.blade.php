@@ -25,6 +25,7 @@
          @if(Auth::check()	)
          	<button class="btn btn-primary">{{Auth::user()->name}}</button>
             <a class="btn btn-primary" href="{{Auth::logout()}}">تسجيل الخروج</a>
+            <a class="btn btn-primary" href="/product/create">sell item</a>
          @else
          	<a class="btn btn-primary" href="/login">الدخول</a>
          	<a class="btn btn-primary"  href="/register">التسجيل</a>

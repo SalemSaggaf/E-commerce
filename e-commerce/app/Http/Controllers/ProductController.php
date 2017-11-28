@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Product;
+use Session;
+use  View; 
+use Validator;
+use Redirect;
 class ProductController extends Controller
 {
     /**
@@ -15,7 +19,7 @@ class ProductController extends Controller
     {
         $products = Product::all();
 
-        return view('home')->with('products', $products);
+        return view('product.index')->with('products', $products);
     }
 
     /**
@@ -26,6 +30,7 @@ class ProductController extends Controller
     public function create()
     {
         //
+        return view('product.create');
     }
 
     /**
@@ -37,6 +42,19 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate(['name' => 'required | max:255',
+            'description' => 'required',
+        ]);
+        
+
+            $product = new Product;
+            $product->name = $request->name;
+            $product->price = $request->price;
+            $product->description = $request->description;
+            $product->image_url = $request->image_url;
+            $product->save();
+            Session::flash('message', 'Successfully created product!');
+            return redirect()->route('product.show', $product->id);
     }
 
     /**
@@ -47,7 +65,9 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        
+        $product = Product::find($id);
+
+        return view('product.show')->with('product',$product);
     }
 
     /**

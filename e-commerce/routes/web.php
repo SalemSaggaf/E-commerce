@@ -11,13 +11,11 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'ProductController@index');
 
 
-Route::get('/product' , function(){
-	return view('product_review');
-});
+Route::resource('/product',"ProductController");
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index');
