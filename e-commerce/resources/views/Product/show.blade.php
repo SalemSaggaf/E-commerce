@@ -1,15 +1,12 @@
 @extends('index')
 @section('content')
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/product_review.css">
-
-
-
-
+      <div class="main_image">
 <div id="wrap">
+
+
   <div id="product_layout_3">
                 <div class="product_image">
-      <div class="main_image">
         <img src="{{$product->image_url}}"/>
       </div>
     </div>

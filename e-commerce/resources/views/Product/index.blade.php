@@ -26,7 +26,7 @@
 								<p class="product-grid__description">{{$value->description}}</p>
 
 								
-								<a href="		" >
+								<a href="{{URL::to('product',$value->id)}}" >
 												<span class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Add to cart</span>	
 
 								</a>

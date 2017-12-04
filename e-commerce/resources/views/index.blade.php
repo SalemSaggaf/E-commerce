@@ -16,20 +16,33 @@
 
      
          
-         	
-         <form method="post" action="#" class="search-query"  role="search" >
-     
-         	         		<input type="search" name="search" placeholder="search..." class="form-control" >         
-      	 	        	
-         </form>
+         	<div class="container">
+                 <form method="post" action="#"  class="form-inline" >
+             
+                    
+                        
+                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success my-2 my-sm-1" type="submit">Search</button>
+                 </form>                
+                        
+            </div>
+
          @if(Auth::check()	)
-         	<button class="btn btn-primary">{{Auth::user()->name}}</button>
-            <a class="btn btn-primary" href="{{Auth::logout()}}">تسجيل الخروج</a>
-            <a class="btn btn-primary" href="/product/create">sell item</a>
-         @else
-         	<a class="btn btn-primary" href="/login">الدخول</a>
-         	<a class="btn btn-primary"  href="/register">التسجيل</a>
-         @endif
+         <div class="container">
+            <div class="col-sm">
+                <button class="btn btn-primary">{{Auth::user()->name}}</button>
+                <a class="btn btn-primary" href="/logout">تسجيل الخروج</a>
+                <a class="btn btn-primary" href="/product/create">sell item</a> 
+            </div>
+         </div>
+          @else
+            <div class="container">
+                <div class="col-sm">
+                    <a class="btn btn-primary" href="/login">الدخول</a>
+                    <a class="btn btn-primary"  href="/register">التسجيل</a>
+                </div>
+            </div>
+            @endif
  </nav>
  	@yield('content')
 </body>

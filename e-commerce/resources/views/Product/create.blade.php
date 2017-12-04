@@ -10,8 +10,8 @@
 	<label for="price">Price :</label>
 	<input type="number" name="price"/>
 	<br>
-	<label for="image_url">Image URL :</label>
-	<input type="text" name="image_url"/>
+	<label for="image_url">hello</label>
+	<input type="file" id="image_url" name="image_url" accept="image/*"  />
 	<br>
 	<label for="description">Description :</label>
 	<input type="textarea" name="description"/>
