@@ -15,7 +15,7 @@ img{
   display:block;
   box-sizing:border-box;
   width:40%;
-  float:right;
+  float:left;
 }
 #product_layout_3 .product_image .main_image img{
   margin:0 auto;
@@ -36,14 +36,12 @@ img{
   display:block;
   font-size:2.4em;
   color:#ccc;
-
   text-decoration:line-through;
 }
 #product_layout_3 .product_desc .sale_price{
   display:block;
   font-size:2.8em;
   color:crimson;
-
   font-weight:700;
 }
 #product_layout_3 .product_desc .stars{
@@ -98,12 +96,12 @@ img{
 #product_layout_3 .buying .cart{
   margin-top:25px;
   width:65%;
-  float:right;
+  float:left;
   margin-bottom:20px;
 }
 #product_layout_3 .buying .cart a.add{
   font-size:2em;
-
+  float:right;
   color:#FFF;
   background:skyblue;
   text-decoration:none;
@@ -148,7 +146,7 @@ img{
 }
 #product_layout_3 .tabular{
   display:block;
-  margin-top:0;
+  margin-top:20px;
   width:100%
 }
 #product_layout_3 .tabular ul.tabs {
@@ -157,7 +155,6 @@ img{
   list-style: none;
   overflow: hidden;
   padding: 0;
-   
 }
 #product_layout_3 .tabular ul.tabs li { 
   float: left;
@@ -167,8 +164,8 @@ img{
 #product_layout_3 .tabular ul.tabs li a {
   position: relative;
   display: block;
-  height: 40px;
-  margin-top: 50px;
+  height: 30px;
+  margin-top: 40px;
   padding: 10px 0 0 0;
   font-size: 1.8em;
   text-align: center; 
@@ -176,7 +173,7 @@ img{
   color: #ffffff;
   background: skyblue;
   transition: padding 0.2s ease, margin 0.2s ease;
-  margin-bottom:-20px;
+  margin-bottom:-10px;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }

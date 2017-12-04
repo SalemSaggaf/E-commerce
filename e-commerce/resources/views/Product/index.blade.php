@@ -1,8 +1,9 @@
 @extends('index')
 
 @section('content')
- <div>	
-	<link rel="stylesheet" type="text/css" href="css/product_list.css">
+ 	
+	<link rel="stylesheet" type="text/css" href="{{URL::asset('css/product_list.css')}}">
+
 <div class="wrapper">
 
 
